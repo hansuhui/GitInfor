@@ -1,0 +1,100 @@
+
+[Repository 생성]
+git init 
+
+
+[상태 확인]
+git status
+
+[파일추가]
+git add  파일명 
+git add  *
+
+파일을 수정시에도 add로 추가해야함 그래야 변경사항이 적용됨
+
+
+[파일제거]
+
+git rm => 원격 저장소와 로컬 저장소에 있는 파일을 삭제한다.
+git rm --cached => 원격 저장소에 있는 파일을 삭제한다. 로컬 저장소에 있는 파일은 삭제하지 않는다.
+
+[커밋]
+git commit  
+git commit  -m "메모"
+
+파일 수정시 git add 없이 바로 커밋하는것
+git commit -a -m "메모"
+
+
+[태그 붙이기]
+
+git tag v1 
+
+[태그 조회]
+
+git tag
+
+
+[stage->un-staged 상태로 변경하기 ]
+
+git reset HEAD myfile
+
+
+
+[원격저장소 지정]
+git remote add origin 원격저장소 주소
+
+
+[branch 만들기]
+    
+git checkout -b 브랜치명 
+
+
+[원격 저장소에 커밋]
+git push -u origin branch명
+
+
+
+[branch 선택]
+
+git checkout master
+git checkout branch명
+
+    
+[branch 제거 ]
+
+git branch -d 브랜치명 
+    
+
+[Merging]
+
+git checkout greet
+git merge master 
+
+=> master변경분을 greet에 merge시킨다.
+
+[branch 변경 비교하기 ]
+
+git diff --color branch1..branch2
+
+[branch내에서 commit간 변경 비교하기]
+
+git diff --color commit_hash1 commit_hash2
+
+[branch push/pull]
+
+git push origin my-branch
+
+원격 브랜치 가져오기: 먼저 원격 브랜치 확인
+
+git branch -r
+
+git checkout -b 생성할브랜치이름 원격브랜치이름
+
+동일한 이름을 사용한다면 -t 옵션 사용 
+
+git checkout --track 원격브랜치이름
+
+
+
+

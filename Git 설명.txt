@@ -1,0 +1,107 @@
+1. 저장소 생성 
+git init
+
+2. 파일 추가 및 파일 변경
+
+git add 파일명
+git add *
+
+- 파일 삭제
+git rm 파일명
+git rm --cached 파일명
+
+3. 커밋
+git commit 
+git commit -m "메모"
+
+파일변경시 추가 없시 커밋하기
+git commit -a -m "메모"
+
+
+4.브랜치 생성 
+
+
+
+git branch 브랜치명
+git checkout -b 브랜치명
+
+- 리스트 보기
+git branch
+
+명령을 실행하면 브랜치마다 마지막 커밋 메시지도 함께 보여준다:
+git branch -v 
+
+
+merge 한 브랜치와 안한 브랜치를 보여준다.
+$ git branch --merged
+$ git branch --no-merged
+
+
+- 합치기
+
+hotfix 브랜치가 있다고 하고 추가 작업을 했다.
+그것을 master에 적용 하는 작업
+
+$ git checkout master
+$ git merge hotfix
+
+$ git checkout remote명칭/브랜치명
+$ git merge remote명칭/브랜치명
+
+
+- 삭제
+
+$ git branch -d hotfix
+
+리모트 브랜치 삭제
+$ git push remote명칭 :브랜치명
+$ git push origin :serverfix
+
+- 충돌시
+
+해당 파일을 수정 하고 커밋 !!
+
+5.태그 생성
+
+git tag 태그명 -m "메모"
+git tag v1.0 -m "메모"
+
+등록된 태그 보기
+git tag 
+
+상세보기
+
+git show 태그명
+
+6.체크 아웃  (브랜치 변경)
+
+git checkout 브랜치명
+git checkout remote명칭/브랜치명
+
+
+7,원격저장소 생성
+
+
+git remote add remote명칭 주소
+git remote add origin 주소
+
+- 저장소 보기
+git remote -v  
+
+
+8.원격저장소 푸쉬
+
+git push origin 브랜치명 
+git push -u origin 브랜치명 
+
+9.원격저장소 pull (원격 저장소에서 파일 받는거)
+
+git pull 등록한 remote명칭
+
+
+10.원격저장소 와 로컬 저장소 동기화
+git fetch origin
+
+
+- 탭으로 자동완성
+- 쉬프트+인서트 붙여넣기
