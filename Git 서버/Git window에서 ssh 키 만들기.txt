@@ -1,0 +1,9 @@
+window에서 ssh 키 만들기 
+http://webdir.tistory.com/200
+
+윈도우에서 Git 사용을 위해 msysgit을 사용중이라면 간단하게 생성할 수 있다.
+
+ssh-keygen -t rsa
+
+
+

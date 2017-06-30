@@ -1,0 +1,42 @@
+1.git  계정 생성
+
+$ sudo adduser git
+$ su git
+암호도 설정
+
+
+2.git 저장소 생성
+git --bare init
+
+
+3.연결할 컴퓨터에서 원격 설정
+$ git init
+$ git add .
+$ git commit -m 'initial commit'
+$ git remote add origin git@gitserver:/opt/git/project.git
+$ git push origin master
+
+이제 이 프로젝트를 Clone하고 나서 수정하고 Push한다:
+
+$ git clone git@gitserver:/opt/git/project.git
+$ cd project
+$ vim README
+$ git commit -am 'fix for the README file'
+$ git push origin master
+
+보안을 위해 git 계정 설정을 변경한다
+
+sudo vi /etc/passwd
+
+which git-shell로  git-shell 위치 확인
+
+변경
+git:x:1000:1000::/home/git:/bin/sh > git:x:1000:1000::/home/git:/usr/bin/git-shell 
+
+
+
+
+
+
+
+끝!!
