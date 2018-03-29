@@ -1,0 +1,39 @@
+[서버에 git 설치]
+
+sudo apt-get git-core
+
+[git 서버 생성]
+
+대략 git 이란 폴더에 repo란 폴더를 생성 후
+repo 폴더 안에 프로젝트명.git 폴더 생성
+프로젝트명.git 안에서 저장소 생성
+
+git init --bare --shared
+
+
+[git ssh 생성]
+
+$ sudo adduser git
+$ su git
+$ cd
+$ mkdir .ssh
+
+계정 생성뒤에 
+
+ssh-keygen 사용하여 SSH 키를 생성한다.
+
+생성된 pub 파일로 
+
+authorized_keys 파일에 추가한다
+
+$ cat 생성된.pub >> /git/.ssh/authorized_keys
+
+
+끝!!!
+
+사용할때는
+
+git remote add origin 계정@gitserver:/경로/project.git
+
+
+
