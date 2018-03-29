@@ -1,0 +1,27 @@
+[서버에 git 설치]
+
+sudo apt-get git-core
+
+[git 서버 생성]
+
+대략 git 이란 폴더에 repo란 폴더를 생성 후
+repo 폴더 안에 프로젝트명.git 폴더 생성
+프로젝트명.git 안에서 저장소 생성
+
+git init --bare --shared
+
+해당 폴더에 소유권 확인하기
+
+헤킹 위험이 있으니 계정 로그인시 git 셀 프로그램으로 시작을 돌린다
+
+/etc/passwd 에서 git 계정 수정하기
+
+
+끝!!!
+
+사용할때는
+
+git remote add origin 계정@gitserver:/경로/project.git
+
+
+
